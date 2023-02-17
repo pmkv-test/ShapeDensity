@@ -1,15 +1,14 @@
 package shape;
 
-class Shape { //package-private
+public class Shape { //package-private
     private int shapeWeight;
     private float shapeDensity;
-    protected float shapeVolume;
 
     protected Shape(int weight) {
         shapeWeight = weight;
     }
 
-    public String calcDensity() {
+    public String calcDensity(float shapeVolume) {
 
         if (shapeVolume > 0 && shapeWeight > 0) {
             shapeDensity = shapeWeight / shapeVolume;
@@ -17,5 +16,9 @@ class Shape { //package-private
 
         return String.format("%.2f", shapeDensity);
     }
-}
+
+    public float calcVolume() {
+        return 0;
+    }
+ }
 

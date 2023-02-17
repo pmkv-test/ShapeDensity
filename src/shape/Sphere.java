@@ -6,10 +6,10 @@ public class Sphere extends Shape {
     public Sphere(int weight, int r) {
         super(weight);
         sphereR = r;
-        shapeVolume = sphereVolume();
-    }
+     }
 
-    private float sphereVolume() {
+    @Override
+    public float calcVolume() {
         float v = (float) (4 * Math.PI * Math.pow(sphereR, 3)) / 3;
         return v;
     }

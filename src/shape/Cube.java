@@ -6,12 +6,11 @@ public class Cube extends Shape {
     public Cube(int weight, int h) {
         super(weight);
         cubeH = h;
-        shapeVolume = cubeVolume();
     }
 
-    private float cubeVolume() {
+    @Override
+    public float calcVolume() {
         float v = (float) Math.pow(cubeH, 3);
         return v;
     }
-
 }

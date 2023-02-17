@@ -1,4 +1,5 @@
 import shape.Cube;
+import shape.Shape;
 import shape.Sphere;
 
 public class Main {
@@ -8,11 +9,11 @@ public class Main {
 
     public static void main(String[] args) {
         String sDensity;
-        Cube cube = new Cube(WEIGHT_CONST,HEIGHT_CONST);
-        sDensity = cube.calcDensity();
+        Shape shape = new Cube(WEIGHT_CONST,HEIGHT_CONST);
+        sDensity = shape.calcDensity(shape.calcVolume());
         System.out.println("Cube volume: "+sDensity);
-        Sphere sphere = new Sphere(WEIGHT_CONST,RADIUS_CONST);
-        sDensity = sphere.calcDensity();
+        shape = new Sphere(WEIGHT_CONST,RADIUS_CONST);
+        sDensity = shape.calcDensity(shape.calcVolume());
         System.out.println("Sphere volume: "+sDensity);
     }
 }
