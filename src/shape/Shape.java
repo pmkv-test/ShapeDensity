@@ -1,6 +1,6 @@
 package shape;
 
-public class Shape { //package-private
+public class Shape {
     private int shapeWeight;
     private float shapeDensity;
 
@@ -20,5 +20,5 @@ public class Shape { //package-private
     public float calcVolume() {
         return 0;
     }
- }
+}
 

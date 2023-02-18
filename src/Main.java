@@ -8,12 +8,15 @@ public class Main {
     private static final int RADIUS_CONST = 3;
 
     public static void main(String[] args) {
-        String sDensity;
-        Shape shape = new Cube(WEIGHT_CONST,HEIGHT_CONST);
-        sDensity = shape.calcDensity(shape.calcVolume());
-        System.out.println("Cube volume: "+sDensity);
-        shape = new Sphere(WEIGHT_CONST,RADIUS_CONST);
-        sDensity = shape.calcDensity(shape.calcVolume());
-        System.out.println("Sphere volume: "+sDensity);
+        Cube cube = new Cube(WEIGHT_CONST, HEIGHT_CONST);
+        Sphere sphere = new Sphere(WEIGHT_CONST, RADIUS_CONST);
+        densityShape(cube);
+        densityShape(sphere);
+    }
+
+    public static void densityShape(Shape shape) {
+        float volume = shape.calcVolume();
+        String density = shape.calcDensity(volume);
+        System.out.println("Density " + shape.getClass().getName() + ": " + density);
     }
 }
