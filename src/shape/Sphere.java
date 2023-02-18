@@ -6,7 +6,7 @@ public class Sphere extends Shape {
     public Sphere(int weight, int r) {
         super(weight);
         sphereR = r;
-     }
+    }
 
     @Override
     public float calcVolume() {
