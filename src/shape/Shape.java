@@ -12,7 +12,7 @@ public class Shape {
 
         if (shapeVolume > 0 && shapeWeight > 0) {
             shapeDensity = shapeWeight / shapeVolume;
-        } else shapeDensity = 0;
+        } else System.err.println("Argument density failed");
 
         return String.format("%.2f", shapeDensity);
     }
