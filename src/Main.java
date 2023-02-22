@@ -9,14 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
         Cube cube = new Cube(WEIGHT_CONST, HEIGHT_CONST);
+        System.out.println(cube.calcDensity());
         Sphere sphere = new Sphere(WEIGHT_CONST, RADIUS_CONST);
-        densityShape(cube);
-        densityShape(sphere);
+        System.out.println(sphere.calcDensity());
     }
 
-    public static void densityShape(Shape shape) {
-        float volume = shape.calcVolume();
-        String density = shape.calcDensity(volume);
-        System.out.println("Density " + shape.getClass().getName() + ": " + density);
-    }
 }

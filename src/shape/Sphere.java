@@ -9,7 +9,7 @@ public class Sphere extends Shape {
     }
 
     @Override
-    public float calcVolume() {
+    protected float calcVolume() {
         float v = (float) (4 * Math.PI * Math.pow(sphereR, 3)) / 3;
         return v;
     }
