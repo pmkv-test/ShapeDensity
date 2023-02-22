@@ -1,6 +1,6 @@
 package shape;
 
-public class Shape {
+public abstract class Shape {
     private int shapeWeight;
     private float shapeDensity;
 
@@ -8,17 +8,17 @@ public class Shape {
         shapeWeight = weight;
     }
 
-    public String calcDensity(float shapeVolume) {
+    public float calcDensity() {
 
-        if (shapeVolume > 0 && shapeWeight > 0) {
-            shapeDensity = shapeWeight / shapeVolume;
+        if (calcVolume() > 0 && shapeWeight > 0) {
+            shapeDensity = shapeWeight / calcVolume();
         } else System.err.println("Argument density failed");
 
-        return String.format("%.2f", shapeDensity);
+        return shapeDensity;
     }
 
-    public float calcVolume() {
-        return 0;
-    }
+    protected abstract float calcVolume();
+
 }
+
 
